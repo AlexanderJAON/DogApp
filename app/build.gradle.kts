@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -109,6 +111,10 @@ dependencies {
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     implementation (libs.circleimageview)
+
+    //dagger hilt
+    implementation ("com.google.dagger:hilt-android:2.47")
+    kapt ("com.google.dagger:hilt-android-compiler:2.47")
 
 
 
